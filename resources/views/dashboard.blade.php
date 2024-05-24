@@ -14,7 +14,7 @@
     margin-top:40px;
     display: flex;
     justify-content: center;
-    align-items: center; /* Center vertically if needed */
+    align-items: center; 
   }
 
 
@@ -173,15 +173,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoutButton = document.querySelector('.logout-button');
     if (logoutButton) {
         logoutButton.addEventListener('mouseover', () => {
-            // Store the original button text (username)
+          
             const originalText = logoutButton.textContent;
 
-            // Change button text to 'Logout' on hover
             logoutButton.textContent = 'Logout';
-
-            // Add an event listener for mouseout to revert text
+            
             logoutButton.addEventListener('mouseout', () => {
-                // Revert button text to original text (username)
+               
                 logoutButton.textContent = originalText;
             });
         });
