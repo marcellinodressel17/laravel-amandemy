@@ -7,17 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .custom-border {
-            border: 1px solid #ccc; /* Warna dan ketebalan border */
-            border-radius: 10px; /* Radius sudut border */
-            padding: 20px; /* Padding di dalam border */
+            border: 1px solid #ccc; 
+            border-radius: 10px; 
+            padding: 20px; 
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6 mt-4"> <!-- Mengubah lebar form menjadi 6 kolom dari 12 -->
-                <div class="custom-border"> <!-- Menambahkan class custom-border -->
+            <div class="col-md-6 mt-4">
+                <div class="custom-border">
                     <h1 class="text-center mb-4">Form Register</h1>
                     <form action="{{ route('register_user') }}" method="POST">
                     @csrf
