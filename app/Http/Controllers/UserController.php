@@ -42,13 +42,12 @@ public function loginUser(Request $request)
 
         $user = Auth::user();
 
-        // Check user role and redirect accordingly
+        
         if ($user->hasRole('superadmin')) {
-            return redirect()->route('dashboard'); // Replace 'admin.dashboard' with your admin route
+            return redirect()->route('dashboard'); 
         } else if ($user->hasRole('user')) {
-            return redirect()->route('dashboard'); // Replace 'products' with your products route
+            return redirect()->route('dashboard'); 
         } else {
-            // Handle unexpected role scenario (optional)
             return back()->withErrors(['error' => 'Unrecognized user role']);
         }
     } else {
